@@ -3,7 +3,8 @@ package gmf
 
 /*
 
-#cgo pkg-config: libavformat libavdevice libavfilter
+#cgo CFLAGS: -I../ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ../ffmpeg-4.0.1dev/lib -llibavformat -llibavdevice -llibavfilter
 
 #include <stdlib.h>
 #include "libavformat/avformat.h"

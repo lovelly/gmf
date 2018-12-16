@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/3d0c/gmf"
+	"github.com/lovelly/gmf"
 )
 
 func assert(i interface{}, err error) interface{} {
@@ -42,7 +42,7 @@ func writeFile(b image.Image) {
 }
 
 func main() {
-	srcFileName := "tests-sample.mp4"
+	srcFileName := "IMG_0314.mp4"
 
 	os.MkdirAll("./tmp", 0755)
 
@@ -75,7 +75,7 @@ func main() {
 	}
 
 	if err := cc.Open(nil); err != nil {
-		log.Fatal(err)
+		log.Fatal("open",err)
 	}
 
 	swsCtx := gmf.NewSwsCtx(srcVideoStream.CodecCtx(), cc, gmf.SWS_BICUBIC)
@@ -87,7 +87,7 @@ func main() {
 		SetFormat(gmf.AV_PIX_FMT_BGR32) // see above
 
 	if err := dstFrame.ImgAlloc(); err != nil {
-		log.Fatal(err)
+		log.Fatal("ImgAlloc", err)
 	}
 
 	ist := assert(inputCtx.GetStream(srcVideoStream.Index())).(*gmf.Stream)
@@ -106,14 +106,14 @@ func main() {
 
 		frame, err := packet.Frames(codecCtx)
 		if err != nil {
-			log.Fatal(err)
+			log.Fatal("Frames ",err)
 		}
 		swsCtx.Scale(frame, dstFrame)
 
 		p, err := dstFrame.Encode(cc)
 
 		if err != nil {
-			log.Fatal(err)
+			log.Fatal("Encode", err)
 		}
 
 		f, _ := os.Create(fmt.Sprintf("tmp/%d.jp2", i))

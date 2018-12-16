@@ -6,7 +6,7 @@ import (
 	"runtime/debug"
 	"strconv"
 
-	. "github.com/3d0c/gmf"
+	. "github.com/lovelly/gmf"
 )
 
 func fatal(err error) {
@@ -47,7 +47,7 @@ func writeFile(b []byte) {
 }
 
 func main() {
-	srcFileName := "tests-sample.mp4"
+	srcFileName := "IMG_0314.mp4"
 
 	os.Mkdir("./tmp", 0755)
 

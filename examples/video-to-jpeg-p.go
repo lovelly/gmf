@@ -11,7 +11,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	. "github.com/3d0c/gmf"
+	. "github.com/lovelly/gmf"
 )
 
 func fatal(err error) {

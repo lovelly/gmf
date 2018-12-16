@@ -35,7 +35,7 @@ It should print valid path to the avformat library.
 Now, just run
 
 ```sh
-go get github.com/3d0c/gmf
+go get github.com/lovelly/gmf
 ```
 
 ##### Other methods

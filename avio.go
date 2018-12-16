@@ -1,8 +1,8 @@
 package gmf
 
 /*
-
-#cgo pkg-config: libavformat
+#cgo CFLAGS: -I../ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ../ffmpeg-4.0.1dev/lib -llibavformat
 
 #include <stdio.h>
 #include <stdlib.h>

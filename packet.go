@@ -1,7 +1,8 @@
 package gmf
 
 /*
-#cgo pkg-config: libavcodec
+#cgo CFLAGS: -I../ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ../ffmpeg-4.0.1dev/lib -llibavcodec
 
 #include "libavcodec/avcodec.h"
 

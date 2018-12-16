@@ -31,7 +31,8 @@ Sleepy Programmer <hunan@emsym.com>
 package gmf
 
 /*
-#cgo pkg-config: libavutil
+#cgo CFLAGS: -I./ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ./ffmpeg-4.0.1dev/lib -llibavutil
 #include <libavutil/audio_fifo.h>
 #include <libavutil/frame.h>
 

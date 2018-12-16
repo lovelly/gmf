@@ -4,8 +4,8 @@
 package gmf
 
 /*
-
-#cgo pkg-config: libswresample
+#cgo CFLAGS: -I../ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ../ffmpeg-4.0.1dev/lib -llibswresample
 
 #include "libswresample/swresample.h"
 #include <libavcodec/avcodec.h>

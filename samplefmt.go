@@ -1,8 +1,8 @@
 package gmf
 
 /*
-
-#cgo pkg-config: libavutil
+#cgo CFLAGS: -I../ffmpeg-4.0.1dev/include
+#cgo LDFLAGS: -L ../ffmpeg-4.0.1dev/lib -llibavutil
 
 #include "libavutil/samplefmt.h"
 
